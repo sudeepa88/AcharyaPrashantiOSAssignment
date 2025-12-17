@@ -27,12 +27,8 @@ struct ProductLazyImage: View {
                 Color.gray.opacity(0.15)
             }
         }
-        .onAppear {
-            downloader.load()   
-        }
-        .onDisappear {
-            downloader.cancel()
-        }
+        .onAppear { downloader.load() }
+        .onDisappear { downloader.cancel() }
         .clipped()
     }
 }
